@@ -1,0 +1,38 @@
+ /* -------------------for top bar---------------------------------  */
+*{margin: 0;}
+
+.top{display: flex;
+    background-color: rgb(42, 42, 122);
+    gap:50px;
+    justify-content: start;
+    align-items: center;
+    height: 100px;}
+
+.aca{color:rgb(164, 164, 248);
+    font-size: 20px;}
+
+.login{color:rgb(164, 164, 248);
+    font-size: 20px;} 
+
+/* -------------------for middle portion-------------------------------*/
+.mid{display: flex;
+    flex-direction:column;
+    background-color: rgb(195, 195, 244);
+    gap:40px;
+    justify-content: start;
+    align-items: center;}
+
+.head5{font-size: 50px;
+    padding-bottom: 10px;}
+
+.mid2{display: flex;
+    background-color: rgb(195, 195, 244);
+    gap:900px;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 30px;
+    font-size: 30px;}
+
+/*----------------------- for bottom most part --------------------------- */
+.bottom{text-align: center;
+    background-color: rgb(164, 164, 243)} 

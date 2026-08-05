@@ -1,0 +1,96 @@
+<!-- username,password,name,age,phone,email,location -->
+
+<!-- Include form elements such as text inputs, email, radio buttons, checkboxes, dropdown list, telephone,
+ date reset button and a submit button. Provide appropriate labels for each form field.
+  Ensure the form is easy to understand and use. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="./css/ass_reg.css">
+  </head>
+
+
+  <body>
+    <div class="main">
+      <div  class="top">
+          <img src="./images/logo.jpg" style="border-radius:50%;width: 100px;">
+          <div class="hd1">
+              <h1 style="color:rgb(26, 26, 134);">I M College </h1>
+              <a href="./ass_home.html">Home</a><br><br>
+          </div>
+      </div>
+
+      <div class="mid">
+        <div class="mid1"></div>
+        <div class="mid2">
+
+          <form class="loginclass">
+            
+            <div class="logoportion">
+                <img src="./images/logo.jpg" style="width:200px; height:200px;border-radius:50%;">
+                <p class="para"><b>Create a New Account</b></p>
+                <h4 class="sub">make it quick and easy</h4>
+            </div>
+
+            <label>First name :</label>
+            <input type="text" placeholder="First Name"><br><br>
+
+            <label>Last name :</label>
+            <input type="text" placeholder="Last Name"><br><br>
+
+            <label>Date :</label>
+            <input type="date" placeholder="Date"><br><br>
+
+            <label>Gender :</label>
+            <input type="radio" name="Gender" value="Male"> Male
+            <input type="radio" name="Gender" value="Female"> Female
+            <input type="radio" name="Gender" value="Other"> Other<br><br>
+
+            <label>Phone Number :</label>
+            <input type="tel" placeholder="Phone number"><br><br>
+
+            <label>Email :</label>
+            <input type="email" placeholder="Email"><br><br>
+
+            <label>Location :</label>
+            <input type="text" placeholder="Location"><br><br>
+
+            <label>Course :</label>
+              <select >
+                <option>Select Course</option>
+                <option>BCA</option>
+                <option>BSc</option>
+                <option>BCom</option>
+                <option>MCA</option></select><br><br>
+
+            <label>Hobbies :</label>
+              <input type="checkbox" name="hobby" value="Reading"> Reading
+              <input type="checkbox" name="hobby" value="Sports"> Sports
+              <input type="checkbox" name="hobby" value="Music"> Music<br><br>
+
+            <label>Username :</label>
+            <input type="text" placeholder="Username"><br><br>
+
+            <label>Password :</label>
+            <input type="password" placeholder="Password"><br><br>
+
+
+            
+            <input type="submit" value="Register" class="button1">
+            <input type="reset" value="Reset" class="button2"><br><br>
+            <!-- <input type="submit" value="I already have an account" class="button3">     -->
+            <h4 class="sub">By clicking on Register ,you agree to the Terms and Conditions.</h4>
+          </form>
+        </div>
+        <div class="mid3"></div> 
+      </div>
+        
+
+        
+    </div>
+  </body>
+  </html>

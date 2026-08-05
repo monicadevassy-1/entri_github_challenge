@@ -1,0 +1,56 @@
+ /* -------------------for top bar---------------------------------  */
+*{margin: 0;}
+
+.top{display: flex;
+    background-color: rgb(189, 189, 245);
+    gap:50px;
+    justify-content: start;
+    align-items: center;
+    height: 10%}
+.hd1{display: flex;
+    gap:300px;
+    align-items: center;
+    justify-content: start;
+    font-size:20px;}
+
+
+/*---------------------for the form and inputs------------------------ */
+img{border-radius: 500px;}
+.para{font-size: 30px;padding: 0px;}
+.mid{background-color:rgb(204, 204, 232);
+    display: flex;
+    justify-content: start;
+    height: 700px;}
+.mid1{width:40%;
+    background-color:rgb(204, 204, 232);}
+.mid2{width:40%;
+    text-align: center;
+    padding: 40px;
+    font-size:20px;
+    border: 5px solid rgb(247, 209, 73);
+    background-color:rgb(243, 243, 165);
+    color: rgb(128, 30, 181);
+    border-radius: 40px;}
+    
+.mid3{width: 40%;
+    background-color:rgb(204, 204, 232);}
+input{
+    padding: 10px;
+    background-color: rgb(139, 231, 217);
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;}
+
+/*-----------------------for buttons at the bottom--------------------------------*/
+.button1{
+    background-color: rgb(97, 119, 218);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    width:300px}
+.button3{
+    background-color:white;
+    color: rgb(97, 119, 218);
+    padding: 10px 20px;
+    border-radius: 5px; 
+    width:300px} 
