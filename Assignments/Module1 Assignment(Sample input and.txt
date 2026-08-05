@@ -1,0 +1,33 @@
+Module1 Assignment(Sample input and output)
+---------------------------------------------------------------------------------------------------------------------
+
+Sample1:
+
+*******************************
+Enter marks for 5 subjects: 34,56,76,87,80
+*******************************
+Average Marks :  66.6
+Grade :  D
+*******************************
+
+
+
+Sample 2:
+*******************************
+Enter marks for 5 subjects: 0,23,12,34,55 
+Mark entered is NOT VALID!!!!!!Please check the Marks again
+
+
+
+
+Sample 3:
+*******************************
+Enter marks for 5 subjects: 0,231,23,23,23
+Mark entered is NOT VALID!!!!!!Please check the Marks again
+
+
+
+Sample 4:
+*******************************
+Enter marks for 5 subjects: 12,23,43,54,23,54,65
+Check the number of Marks entered!!!!!!!!!!!!!
