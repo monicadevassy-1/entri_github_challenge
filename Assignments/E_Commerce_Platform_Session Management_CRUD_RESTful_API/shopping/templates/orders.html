@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+    <h2>My Orders</h2>
+    {% if orders %}
+    <table border="1">
+        <tr>
+            <th>Order ID</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>View</th>
+            <th>Want to Cancel??</th>
+        
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.order_date }}</td>
+            <td>₹{{ order.total }}</td>
+            <td>{{ order.status }}</td>
+            <td><a href="{% url 'order_details' order.id %}">Details</a></td>
+            <td>{% if order.status == "Pending" %}
+                    <a href="{% url 'cancel_order' order.id %}"onclick="return confirm('Are you sure you want to cancel this order?');">Cancel</a>
+                {% else %}
+                    Cancelled
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h3>No Orders Found.</h3>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "cartoon.html" %}
+{% block content %}
+    <h1>LOGIN PAGE</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Username" name="usern"><br><br>
+        <input type="password" placeholder="Password" name="passw"><br><br>
+        <input type="submit" placeholder="Log In" >
+    </form>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                {{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

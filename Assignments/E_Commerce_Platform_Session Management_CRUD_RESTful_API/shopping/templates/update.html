@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>UPDATE CART</h2>
+    <form method="post">
+        {% csrf_token %}
+        <h5>Product:{{ item.product.name }}</h5>
+        <label>Quantity</label>
+        <input type="number" name="qty" value="{{ item.quantity }}" min="1">
+        <br><br>
+        <button type="submit">Update</button>
+    </form>
+{% endblock %}

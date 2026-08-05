@@ -1,0 +1,110 @@
+.main{
+    /* height: ; */
+    background-color: rgb(84, 20, 234);
+    color: rgb(245, 226, 217);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+    /* padding-top: 50%;} */
+}
+    
+html {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f2f2f2;
+}
+
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: right;
+    justify-items: end;
+    margin-left: 900px;
+}
+
+.profile-table{
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.profile-table th{
+    padding: 12px;
+}
+
+.profile-table td{  
+    padding: 12px;
+}
+
+.btn{
+    text-align:center;
+}
+
+input[type="submit"]{
+    padding:10px 20px;
+    background:rgb(7, 206, 143);
+    color:rgb(61, 21, 170);
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    /* margin-left: 150px; */
+}
+
+footer {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* background-color: red; */
+}
+
+.recent-products{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.recent-card{
+    width: 180px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.recent-card img{
+    border-radius: 8px;
+}
+
+.recent-card a{
+    text-decoration: none;
+    color: blue;
+}
+
+.recent-card a:hover{
+    text-decoration: underline;
+}

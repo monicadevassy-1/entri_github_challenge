@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> Detailed Page</h1>
+    <img src="/media/{{ pro.pimg }}" width="300px" height="300px">
+    <p>Name : {{pro.name}}</p>
+    <p>Price : {{pro.price}}</p>
+    <p>Des : {{pro.des}}</p>
+
+    <hr>
+    <h3>Recently Viewed Products</h3>
+    {% if recent_products %}
+        <div class="recent-products">
+            {% for item in recent_products %}
+                <div class="recent-card">
+                    {% if item.pimg %}
+                        <img src="{{ item.pimg.url }}" width="120" height="120"><br>
+                    {% endif %}
+                    <b>{{ item.name }}</b><br>
+                    ₹{{ item.price }}<br>
+                    <a href="{% url 'product_details' item.id %}">View Details</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No recently viewed products.</p>
+    {% endif %}
+{% endblock %}

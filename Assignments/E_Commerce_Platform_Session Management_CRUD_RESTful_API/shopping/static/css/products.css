@@ -1,0 +1,36 @@
+td{
+    border: 2px solid blue;  
+    padding: 10px;
+    width: 20%;
+    border: 2px solid blue;
+    padding: 10px;
+    text-align: center;   
+    vertical-align: middle;
+}
+
+tr{
+    padding: 10px;
+    width: 20%;
+}
+
+th{
+    border: 2px solid blue;
+    padding: 10px;
+    text-align: center;   
+    vertical-align: middle;
+}
+
+img{
+    max-width: 300px;
+    height: auto;
+    
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid blue;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(197, 224, 243);
+}
