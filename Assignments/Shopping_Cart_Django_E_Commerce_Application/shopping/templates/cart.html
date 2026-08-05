@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+    <h1>MY CART</h1>
+    {% if cart_items %}
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub Total</th>
+                <th>Update</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for item in cart_items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{% if item.product.pimg %}
+                        <img src="{{ item.product.pimg.url }}" height="120" width="120">
+                    {% endif %}</td>
+                <td>₹{{ item.product.price }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>₹{{ item.sub_total }}</td>
+                <td><a href="{% url 'update_cart' item.id %}">Update</a></td>
+                <td><a href="{% url 'remove_from_cart' item.id %}"
+                    onclick="return confirm('Are you sure you want to remove this item from your cart?');">Remove</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h2>Grand Total : ₹{{ total }}</h2>
+    {% else %}
+    <h2>Your cart is empty.</h2>
+    {% endif %}
+    <br>
+{% endblock %}

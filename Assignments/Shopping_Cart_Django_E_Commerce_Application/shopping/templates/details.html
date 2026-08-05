@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> Detailed Page</h1>
+    <img src="/media/{{ pro.pimg }}" width="300px" height="300px">
+    <p>Name : {{pro.name}}</p>
+    <p>Price : {{pro.price}}</p>
+    <p>Des : {{pro.des}}</p>
+{% endblock %}

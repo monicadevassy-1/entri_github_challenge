@@ -1,0 +1,8 @@
+*{
+    color:  darkblue;
+    background-color: yellow;}
+
+body{    
+    display: flex;
+    align-items: center;
+}

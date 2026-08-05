@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+    <h1>ALL PRODUCTS</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color:rgb(208, 234, 208);">****{{ message }}****</p>
+        {% endfor %}
+    {% endif %}
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Product Description</th>
+                {% if request.user.username == 'monica' %}
+                    <th>Edit</th>
+                    <th>Delete</th>
+                {% else %}
+                    <th>Add to Cart</th>
+                    <th>Goto Cart</th>
+                {% endif %}
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for i in pro %}
+                <tr>
+                    <td> 
+                        {% if i.pimg %}
+                            <img src="/media/{{i.pimg}}" alt="" height="200px" width="200px">
+                        {% endif %}
+                        <h5>{{ i.name }}</h5> </td>
+                    <td><a href="{% url 'product_details' i.id %}">About this item   🔍</a></td>
+                    {% if request.user.username == 'monica' %}
+                        <td><a href="{% url 'edit_product' i.id %}">Edit</a></td>
+                        <td><a href="{% url 'delete_product' i.id %}">Delete  ❌</a></td>
+                    {% else %}
+                        <td><a href="{% url 'add_to_cart' i.id %}">Add to Cart  ➕🛒</a> </td>
+                        <td><a href="{% url 'view_cart'  %}">Goto Cart 🛒</a> </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

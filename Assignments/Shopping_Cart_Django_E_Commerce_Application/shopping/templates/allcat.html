@@ -1,0 +1,8 @@
+<body>
+    <h1>Category</h1>
+    {% for i in cat %}
+        <a href="{% url 'cat_products' i.id %}">
+            <p>{{i.name}} </p>
+        </a>
+    {% endfor %}
+</body>

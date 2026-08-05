@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>My Profile</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="profile-table">
+            {{ form.as_table }}
+        </table>
+        <br>
+        <div class="btn">
+            <input type="submit" value="Save Changes">
+        </div>
+    </form>
+{% endblock %}
