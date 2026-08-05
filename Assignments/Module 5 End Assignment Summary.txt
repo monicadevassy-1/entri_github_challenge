@@ -1,0 +1,32 @@
+Module 5 End Assignment
+-------------------------
+link:https://monicadevassy.pythonanywhere.com/shop/product
+
+
+
+
+
+ Summary
+-------------------------------------
+Deployment of Django Project on PythonAnywhere
+----------------------------------------------------
+
+For this assignment, I successfully deployed my Django-based HI-LITE Shopping Mart web application on the PythonAnywhere cloud platform.
+The objective was to host a fully functional Django application by configuring the project environment, database, static files, media files, and WSGI settings.
+
+Deployment Steps Followed
+--------------------------------
+Created a PythonAnywhere account and uploaded the Django project.
+Created and activated a virtual environment.
+Installed all required Python packages using pip.
+Configured the Django settings for deployment.
+Configured STATIC_URL.
+Modified the WSGI configuration file to connect the Django project correctly.
+Reloaded the web application and verified that it was running successfully on PythonAnywhere.
+
+Key Configurations Performed
+--------------------------------
+Configured the virtual environment with all required dependencies.
+Configured the WSGI application path for proper server integration.
+Verified that the website loaded correctly and that all pages, including login, product listing, 
+profile management, and cart functionality, worked as expected after deployment.
