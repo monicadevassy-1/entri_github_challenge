@@ -1,0 +1,50 @@
+{%extends "base.html"%}
+    {%block content%}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RESUME-MONICA</title>
+        <link rel="stylesheet" href="/static/css/resume.css">
+    </head>
+    <body>
+        <div class="bodyfull">
+            <div class="box">
+                <h1 class="h1">RESUME</h1>
+                <img src="/static/images/monicapassport.JPG" class="profile-pic">
+                {% for i in profile %}
+                    <h2 class="h2">{{ i.name }}</h2>
+                    <div class="innerbox">
+                        <h6>Age : {{ i.age}} |  Gender : {{ i.gender }}
+                            {% if i.gender == "Male" %}
+                                👨
+                            {% elif i.gender == "Female" %}
+                                👩
+                            {% else %}
+                                🧑
+                            {% endif %}</h6>
+                        <h6>{{ i.phone}} | {{ i.email }}</h6>
+                        <h6>{{ i.linkedin}} | {{ i.github }}</h6>
+
+                        <h4>Profile Summary :</h4>
+                        <p>{{i.summary}}</p>
+                        <h4>Skills :</h4>
+                        <p> {{ i.skills }}</p>
+
+                        <h4>Education :</h4>
+                        <p>{{ i.education.college}} | {{ i.education.degree }} | {{ i.education.year }}</p>                    
+                        
+                        <h4>Experience :</h4>
+                        <p>Company : {{ i.experience.company }} | {{ i.experience.location }}</p>
+                        <p>{{ i.experience.desc }}</p>
+
+                        <h4>Certifications :</h4>
+                        <p>{{i.cert.inst}}</p>
+                        <p>{{i.cert.prog}}</p>
+                    </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </body>
+    </html>
+{%endblock%}
